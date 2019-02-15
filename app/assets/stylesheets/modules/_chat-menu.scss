@@ -1,0 +1,40 @@
+.chat-menu{
+  height: 100vh;
+  width: 300px;
+  background-color: $Color_Gray;
+  color: $Color_White;
+  font-size: 16px;
+  float: left;
+  &__user{
+    height: 9%;
+    width: 260px;
+    padding: 40px 20px 0;
+    background-color: $Color_Darkgray;
+    &-name{
+      float: left;
+    }
+    &-contents{
+      float: right;
+      &-new-group{
+        display: inline-block;
+      }
+      &-edit-user{
+        display: inline-block;
+      }
+    }
+    &-icon{
+      color: $Color_White;
+    }
+  }
+  &__group{
+    width: 260px;
+    padding: 20px;
+    &-name{
+      font-size: 15px;
+    }
+    &-message{
+      font-size: 11px;
+      margin: 5px 0 0;
+    }
+  }
+}

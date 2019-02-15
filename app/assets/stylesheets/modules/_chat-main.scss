@@ -1,0 +1,91 @@
+.chat-main{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: left;
+  &__header{
+    height: 14%;
+    border-bottom: 1px solid $Color_Palegray;
+    &--group{
+      margin: 0 40px;
+      &-name{
+        font-size: 20px;
+        margin: 35px 0 15px;
+        color: $Color_Black;
+        float: left;
+      }
+      &-edit-botton{
+        color: $Color_Pictonblue;
+        font-size: 15px;
+        float: right;
+        border: 1px solid $Color_Pictonblue;
+        margin: 28px 0 0;
+        padding: 12.5px 20px;
+      }
+      &-members{
+        font-size: 12px;
+        color: $Color_Silvergray;
+        text-align: left;
+        clear: both;
+      }
+    }
+  }
+  &__message{
+    height: 9%;
+    padding-top: 26px;
+    margin: 0 40px;
+    padding: 20px 0;
+    &-name{
+      font-size: 16px;
+      color: $Color_Heavyblue;
+      font-weight: bold;
+      display: inline-block;
+    }
+    &-time{
+      font-size: 12px;
+      color: $Color_Silvergray;
+      padding: 0 10px 10px;
+      display: inline-block;
+    }
+    &-body{
+      font-size: 14px;
+      color: $Color_Heavyblue;
+    }
+    &-body-image{
+    }
+  }
+  &__footer{
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 300px);
+    &-form{
+      background-color: $Color_Sunkengray;
+      padding: 0 40px;
+      width: 100%;
+    }
+    .description{
+      height: 50px;
+      width: calc(100% - 215px);
+      font-size: 16px;
+      color: $Color_Heavyblue;
+      padding: 0 0 0 10px;
+      position: relative;
+    }
+    .chat-imgfile{
+      position: absolute;
+      top: 35px;
+      right: 170px;
+    }
+    .image{
+      display: none;
+    }
+    .submit{
+      width: 70px;
+      height: 50px;
+      background-color: $Color_Pictonblue;
+      color: $Color_White;
+      margin: 20px 40px 20px 15px;
+      text-align: center;
+      border: none;
+    }
+  }
+}
