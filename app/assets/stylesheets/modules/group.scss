@@ -65,11 +65,11 @@
       display: block;
       line-height: 50px;
       font-weight: bold;
-      text-align: right;
+      float: left;
     }
 
     .chat-group-form__input {
-      float: left;
+      float: right;
       width: 100%;
       line-height: 30px;
       padding: 10px 15px;

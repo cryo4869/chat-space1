@@ -1,12 +1,19 @@
+a{
+  text-decoration: none;
+}
+
 .chat {
   height: 100vh;
   width: calc(100% - 300px);
-  overflow: auto;
+  float: right;
+  position: relative;
   .header {
     width: calc(100vw - 340px);
     height: 70px;
     border-bottom: 1px solid #eeeeee;
     padding: 30px 0px 0px 40px;
+    position: fixed;
+    overflow: scroll;
     .left-header {
       &__button {
       color: #38AEF0;
@@ -46,10 +53,12 @@
   }
 
   .messages{
-    height: 100vh;
-    height: 60px;
     margin:40px 0 0 0;
     padding: 30px 0px 0px 40px;
+    overflow: scroll;
+    height: 693px;
+    top: 60px;
+    position: absolute;
     .message{
       &__user-name{
         font-size: 16px;
@@ -74,7 +83,8 @@
     width: calc(100vw - 340px);
     position: fixed;
     bottom: 0;
-    padding: 0 0 0 00px;
+    margin-bottom: 43px;
+    height: 50px;
     .form{
       padding: 20px 20px;
       width: 100%;
@@ -108,7 +118,6 @@
         float: right;
         font-size: 16px;
         height: 50px;
-        margin: 0 20px 0 0;
         padding: 0 20px;
       }
     }
