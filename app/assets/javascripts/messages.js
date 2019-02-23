@@ -15,7 +15,7 @@ function buildHTML(message){
                   </p>
                 </div>`;
     return html
-  }
+    }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new formData(this);
@@ -32,9 +32,12 @@ function buildHTML(message){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.form__message').val('')
+      $('.messages').animate({
+        scrollTop: $('.messages')[0].scrollHeight
+      })
     })
     .fail(function(){
-      alert('エラーです');
+      alert('同期に失敗しました');
     })
   })
 });
