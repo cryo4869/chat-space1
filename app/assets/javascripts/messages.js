@@ -30,14 +30,16 @@ function buildHTML(message){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html)
-      $('.form__message').val('')
+      $('.messages').append(html);
+      $('.form__message').val('');
+      $(".form__submit").removeAttr("disabled");
       $('.messages').animate({
         scrollTop: $('.messages')[0].scrollHeight
       })
     })
     .fail(function(){
       alert('同期に失敗しました');
+      $(".form__submit").removeAttr("disabled");
     })
   })
 });
