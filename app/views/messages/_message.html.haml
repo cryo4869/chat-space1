@@ -8,18 +8,3 @@
       %p.lower-message__content
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
-
-<div class="message">
-<div class="message__user-name">
-${message.user_name}
-</div>
-<div class="message__date">
-${message.date}
-</div>
-<div class="message__body">
-<p class="lower-message__content">
-${message.date}
-${image}
-</p>
-</div>
