@@ -1,4 +1,19 @@
 $(function(){
+function buildHTML(message){
+    var html = `<div class="message">
+                 <div class="message__user-name" >
+                  ${message.name}
+                 </div>
+                 <div class="message__date">
+                  ${message.date}
+                  </div>
+                  <div class="message__body">
+                  <p class="lower-message__content">
+                    ${message.content}
+                  </p>
+                </div>`;
+    return html
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new formData(this);
@@ -11,5 +26,13 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.messages').append(html)
+      $('.form__message').val('')
+    })
+    .fail(function(){
+      alert('エラーです');
+    })
   })
-})
+});
