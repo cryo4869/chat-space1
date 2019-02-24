@@ -1,5 +1,5 @@
 $(function(){
-function buildHTML(message){
+function buildSendMessageHTML(message){
     var image = message.image ? '<img src="${message.image}" class="lower-message__image" />' : "";
     var html = `<div class="message">
                  <div class="message__user-name" >
@@ -28,8 +28,8 @@ function buildHTML(message){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(formData){
+      var html = buildSendMessageHTML(formData);
       $('.messages').append(html);
       $('.form__message').val('');
       $(".form__submit").removeAttr("disabled");
