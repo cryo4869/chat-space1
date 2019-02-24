@@ -28,8 +28,8 @@ function buildSendMessageHTML(message){
       processData: false,
       contentType: false
     })
-    .done(function(formData){
-      var html = buildSendMessageHTML(formData);
+    .done(function(message){
+      var html = buildSendMessageHTML(message);
       $('.messages').append(html);
       $('.form__message').val('');
       $(".form__submit").removeAttr("disabled");
